@@ -32,6 +32,40 @@ namespace Weave {
 namespace Platform {
 
 /**
+ *  @def ROUNDDOWN(a, b)
+ *
+ *  This macro performs rounding towards 0.
+ *
+ *  This macro assumes that inputs are unsigned integers.
+ *
+ *  @param[in] a         Value to be rounded.
+ *
+ *  @param[in] b         Rounding granularity.
+ *
+ *  @return              Value rounded down to the nearest multiple of rounding granularity.
+ */
+#ifndef ROUNDDOWN
+#define ROUNDDOWN(a, b)                         ((a) / (b) * (b))
+#endif
+
+/**
+ *  @def ROUNDUP(a, b)
+ *
+ *  This macro performs rounding away from 0.
+ *
+ *  This macro assumes that inputs are unsigned integers.
+ *
+ *  @param[in] a         Value to be rounded.
+ *
+ *  @param[in] b         Rounding granularity.
+ *
+ *  @return              Value rounded up to the nearest multiple of rounding granularity.
+ */
+#ifndef ROUNDUP
+#define ROUNDUP(a, b)                           ROUNDDOWN((a) + (b) - 1))
+#endif
+
+/**
  * @brief
  *   Performs signed 64-bit divided by 64-bit operation and returns the quotient.
  *
