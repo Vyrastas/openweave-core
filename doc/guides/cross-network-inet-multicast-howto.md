@@ -81,24 +81,26 @@ Each of the following sets of commands should be run from parallel, independent 
 
 ```
 % happy-shell BorderRouter
-$ {absolute or relative path to mcproxy daemon executable from Step 1}/mcproxy -f {absolute or relative path to mcproxy configuration file from Step 5}/mcproxy.conf
+root@BorderRouter:# {path-to-mcproxy}/mcproxy -f {path-to-mcproxy-config}/mcproxy.conf
 ```
 
 ### Receiver
 
 ```
 % happy-shell WiFiNode
-$ openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 --group-expected-rx-packets 5 --group-expected-tx-packets 0 -l
+root@WiFiNode:# openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 --group-expected-rx-packets 5 --group-expected-tx-packets 0 -l
 ```
 
 ### Sender
 
 ```
 % happy-shell ThreadNode
-$ openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wpan0 -g 5 --group-expected-rx-packets 0 --group-expected-tx-packets 5 -L
+root@ThreadNode:# openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wpan0 -g 5 --group-expected-rx-packets 0 --group-expected-tx-packets 5 -L
 ```
 
-### Output[^1]
+### Output
+
+> Note: Your output may vary slightly around the process IDs and source addresses displayed by the receiver.
 
 #### Sender
 
@@ -143,5 +145,3 @@ WEAVE:IN: Async DNS worker thread exiting.
 WEAVE:IN: Async DNS worker thread woke up.
 WEAVE:IN: Async DNS worker thread exiting.
 ```
-
-[^1]: Your output may vary slightly around the process IDs and source addresses displayed by the receiver.
