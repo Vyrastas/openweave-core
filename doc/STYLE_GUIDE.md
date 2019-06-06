@@ -21,7 +21,7 @@ OpenWeave follows the [Google Developers Style Guide](https://developers.google.
 
 Use standard Markdown when authoring OpenWeave documentation. While HTML may be used for more complex content such as tables, use Markdown as much as possible. To ease mirroring and to keep formatting consistent with openweave.io, we ask that you follow the specific guidelines listed here.
 
-> **Tip:** Edit this file to see the Markdown behind the examples.
+> Note: Edit this file to see the Markdown behind the examples.
 
 ### Command line examples
 
@@ -30,6 +30,20 @@ Feel free to use either `$` or `%` to preface command line examples, but be cons
 ```
 $ git clone https://github.com/openweave/openweave-core.git
 % git clone https://github.com/openweave/openweave-core.git
+```
+
+### Terminal prompts
+
+If you need use a full terminal prompt with username and hostname, use the format of `root@{hostname}{special-characters}#`.
+
+For example, when logged into a Docker container, you might have a prompt like this:
+```
+root@c0f3912a74ff:/#
+```
+
+Or in a Happy node, you might have:
+```
+root@BorderRouter:#
 ```
 
 ### Commands and output
@@ -77,7 +91,23 @@ If you want your headers to render with nice-looking step numbers on openweave.i
     ## Step 2: Text of the next step
     ## Step 3: Text of the last step
 
-See the **OpenWeave + Happy Cross Network Multicast Inet Layer HOWTO** for an example:
+See the **OpenWeave + Happy Cross Network Multicast Inet Layer HOWTO** for an example of this:
 
 *   [GitHub version](/guides/cross-network-inet-multicast-howto.md)
 *   [openweave.io version](https://openweave.io/guides/cross-network-inet-multicast-howto)
+
+### Callouts
+
+Use a blockquote `>` with one of these callout types:
+
+* 	Note
+*   Caution
+*   Warning
+
+For example:
+
+> Note: This is something to be aware of.
+
+Or:
+
+> Caution: The user should be careful running the next command.
