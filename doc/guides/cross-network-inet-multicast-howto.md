@@ -81,7 +81,7 @@ Each of the following sets of commands should be run from parallel, independent 
 
 ```
 % happy-shell BorderRouter
-root@BorderRouter:# {path-to-mcproxy}/mcproxy -f {path-to-mcproxy-config}/mcproxy.conf
+root@BorderRouter:# {path-to-mcproxy-from-step1}/mcproxy -f {path-to-mcproxy-config-from-step5}/mcproxy.conf
 ```
 
 ### Receiver
@@ -105,7 +105,7 @@ root@ThreadNode:# openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -
 #### Sender
 
 ```
-$ openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 ... -L
+% openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 ... -L
 Weave Node ready to service events; PID: 50845; PPID: 46482
 Using UDP/IPv6, device interface: wpan0 (w/o LwIP)
 Will join multicast group ff15::5
@@ -124,7 +124,7 @@ WEAVE:IN: Async DNS worker thread exiting.
 #### Receiver
 
 ```
-$ openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 ... -l
+% openweave-core/src/test-apps/TestInetLayerMulticast -6 --udp -I wlan0 -g 5 ... -l
 Weave Node ready to service events; PID: 50826; PPID: 46499
 Using UDP/IPv6, device interface: wlan0 (w/o LwIP)
 Will join multicast group ff15::5
